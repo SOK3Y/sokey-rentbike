@@ -37,30 +37,23 @@ Citizen.CreateThread(function()
 		SetEntityInvincible(thisPed, true)
 		TaskSetBlockingOfNonTemporaryEvents(thisPed, true)
 	end
-
-exports.qtarget:AddTargetModel({"a_m_y_epsilon_01"}, {
-    options = {
-      {
-        event = "so-bike:rentbikeBMX",
-        icon = "fas fa-bicycle",
-        label = "Wypożycz bmx",
-        num = 1
-      },
-	  {
-        event = "so-bike:rentbikeScorcher",
-        icon = "fas fa-bicycle",
-        label = "Wypożycz scorcher",
-        num = 2
-      },
-	  {
-        event = "so-bike:rentbikeTribike",
-        icon = "fas fa-bicycle",
-        label = "Wypożycz tribike",
-        num = 3
-      },
-    },
-    distance = 2
-  })
+	exports.ox_target:addModel('a_m_y_epsilon_01', {
+		{
+			event = "so-bike:rentbikeBMX",
+			icon = "fas fa-bicycle",
+			label = "Wypożycz bmx",
+		  },
+		  {
+			event = "so-bike:rentbikeScorcher",
+			icon = "fas fa-bicycle",
+			label = "Wypożycz scorcher",
+		  },
+		  {
+			event = "so-bike:rentbikeTribike",
+			icon = "fas fa-bicycle",
+			label = "Wypożycz tribike",
+		  },
+})		
 end)
 
 RegisterNetEvent('so-bike:rentbikeBMX', function()
